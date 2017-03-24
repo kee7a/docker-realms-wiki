@@ -38,22 +38,17 @@ USER wiki
 ENV WORKERS=3
 ENV GEVENT_RESOLVER=ares
 ENV REALMS_ENV=docker
-ENV REALMS_WIKI_PATH=/data/wiki/repo
-ENV REALMS_DB_URI='sqlite:////data/db/wiki.db'
+ENV REALMS_WIKI_PATH=/data/repo
+ENV REALMS_DB_URI='sqlite:////data/wiki.db'
 
-#RUN mkdir -p /data && touch /data/.a
-#RUN mkdir -p /data/config
-#RUN mkdir -p /data/db
-#RUN mkdir -p /data/repo
+RUN mkdir -p /data && touch /data/.a
 
-VOLUME /data/config
-VOLUME /data/db
-VOLUME /data/wiki
+VOLUME /data
 
 EXPOSE 5000
 
 #RUN realms-wiki create_db
-WORKDIR /data/config
+WORKDIR /data
 
 CMD gunicorn \
 --name realms-wiki \
