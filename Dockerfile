@@ -38,7 +38,7 @@ USER wiki
 ENV WORKERS=3
 ENV GEVENT_RESOLVER=ares
 ENV REALMS_ENV=docker
-ENV REALMS_WIKI_PATH=/data/wiki/repo
+ENV REALMS_WIKI_PATH=/data/repo
 ENV REALMS_DB_URI='sqlite:////data/db/wiki.db'
 
 #RUN mkdir -p /data && touch /data/.a
