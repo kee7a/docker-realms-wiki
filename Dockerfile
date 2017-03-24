@@ -48,7 +48,7 @@ ENV REALMS_DB_URI='sqlite:////data/db/wiki.db'
 
 VOLUME /data/config
 VOLUME /data/db
-VOLUME /data/wiki
+VOLUME /data/repo
 
 EXPOSE 5000
 
