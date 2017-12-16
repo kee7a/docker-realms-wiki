@@ -5,7 +5,7 @@ RUN apk update && \
     python-dev \
     openldap-dev \
     libsasl \
-    libressl2.4-libssl \
+    libressl2.6-libssl \
     yaml-dev \
     libffi \
     zlib-dev \
